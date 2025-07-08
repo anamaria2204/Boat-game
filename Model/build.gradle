@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'joc'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+    implementation 'org.glassfish:jakarta.el:4.0.2'
+
+    implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.4.Final'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'ch.qos.logback:logback-classic:1.4.14'
+
+}
+
+test {
+    useJUnitPlatform()
+}
